@@ -37,7 +37,7 @@ const Sidebar = () => {
   return (
     <nav className={`${styles.sidebar} ${state.viewMode === "dark" ? '' : styles.light}`}>
       <Image
-        src="/portfolio_image.jpg"
+        src="/portfolio.jpg"
         alt="Garrett Palmeri Headshot"
         height={200}
         width={200}
