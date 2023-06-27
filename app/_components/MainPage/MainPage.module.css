@@ -1,0 +1,73 @@
+.container {
+  position: absolute;
+  left: 350px;
+  right: 0;
+  min-height: 100%;
+  width: calc(100% - 350px);
+  margin-right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .container {
+    left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    left: 0;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.container.light {
+  background-color: white;
+}
+.container.light h1{
+  color: black;
+}
+.container.light h2{
+  color: black;
+}
+.container.light h3{
+  color: black;
+}
+.container.light h4{
+  color: black;
+}
+.container.light h5{
+  color: black;
+}
+.container.light p{
+  color: black;
+}
+
+.container.dark {
+  background-color: black;
+}
+.container.dark h1{
+  color: white;
+}
+.container.dark h2{
+  color: white;
+}
+.container.dark h3{
+  color: white;
+}
+.container.dark h4{
+  color: white;
+}
+.container.dark h5{
+  color: white;
+}
+.container.dark p{
+  color: white;
+}
+
+.innerContainer {
+  max-width: 1400px;
+}

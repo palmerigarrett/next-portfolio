@@ -1,0 +1,235 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  padding: 20px;
+  height: 100vh;
+  background-color: #171927d4;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.063);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar.light {
+  background-color: #caf0ffd4;
+}
+
+.sidebar.light p {
+  color: black;
+}
+.sidebar.light a {
+  color: black;
+}
+.sidebar.light h1 {
+  color: black;
+}
+.sidebar.light h2 {
+  color: black;
+}
+.sidebar.light h3 {
+  color: black;
+}
+.sidebar.light h4 {
+  color: black;
+}
+
+
+#portfolioImage {
+  border-radius: 50%;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.titleContainer { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.titleContainer:hover {
+  opacity: .75;
+}
+
+@keyframes stageAppear {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes stageGrow {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  75% {
+    width: 110%;
+    height: 10px;
+  }
+  100% {
+    width: 85%;
+    height: 10px;
+  }
+}
+
+.stage {
+  visibility: hidden; /* Initially hide the .stage element */
+  /* background-color: #ffffffe9; */
+  background: linear-gradient(to bottom, white, grey);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 10px;
+  height: 10px;
+  max-height: 10px;
+  width: 85%;
+  opacity: 0;
+  animation: stageAppear 0.5s forwards, stageGrow 1s forwards;
+  animation-delay: 1s;
+}
+
+
+@keyframes openDropdownAnimation {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes closeDropdownAnimation {
+  from {
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    height: 0;
+  }
+}
+.menuTitle {
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.dropdown.open {
+  animation: openDropdownAnimation .3s ease-in-out forwards;
+}
+
+.dropdown.closed {
+  animation: closeDropdownAnimation .3s ease-in-out forwards;
+}
+
+.subtitleContainer {
+  margin-bottom: 2rem;
+}
+
+.switchToggle {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  width: 200px;
+  height: 34px;
+  border-radius: 17px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.switchToggle .toggleButton {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.switchToggle.on {
+  background-color: #171927d4;
+}
+
+.switchToggle.on .toggleButton {
+  background-color: #caf0ffd4;
+  transform: translateX(165px);
+}
+
+.switchToggle.off {
+  background-color: #caf0ffd4
+}
+
+.switchToggle.on span{
+  color: #caf0ffd4;
+}
+.switchToggle.off span{
+  color: #171927d4;
+}
+
+.switchToggle.off .toggleButton {
+  background-color: #171927d4;
+  transform: translateX(0);
+}
+
+.switchLabel {
+  left: 40px;
+  position: absolute;
+}
+
+.switchToggle.on .switchLabel {
+  transform: translateX(-30px);
+  transition: transform .3s;
+}
+.switchToggle.off .switchLabel {
+  transform: translateX(0);
+  transition: transform .3s;
+}
+
+

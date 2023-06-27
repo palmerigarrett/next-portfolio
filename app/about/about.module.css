@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  height: 325px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .5rem;
+  cursor: pointer;
+  margin: 0 1rem 3rem 1rem;
+  opacity: 1;
+}
+
+.card:hover {
+  opacity: .75;
+}
+
+.light {
+  background-color: #d2d2d2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark {
+  box-shadow: 0 2px 4px rgba(169, 169, 169, 0.2);
+  background-color: #171927d4;
+}
+
+.light h4 {
+  color: black;
+}
+.light p {
+  color: black;
+}
+
+.dark h4 {
+  color: white;
+}
+.dark p {
+  color: white;
+}
+
+.copyContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.copy {
+  text-align: start;
+}
+

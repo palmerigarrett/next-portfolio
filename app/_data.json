@@ -1,0 +1,21 @@
+{
+  "main": {
+    "summary": "I'm a dynamic Full-Stack Web Developer with a reputation for adaptability and swiftly learning and integrating new technologies. My breadth of knowledge encompasses designing user-friendly frontends to constructing robust backend systems, ensuring the delivery of comprehensive and efficient web applications. With a keen eye for detail and a strong commitment to usability, I strive to create exceptional user experiences across desktop and mobile platforms. I pride myself on my ability to foster seamless communication, adept at bridging the gap between the technical and non-technical worlds. Beyond my programming prowess, I enjoy serving as a mentor, guiding budding engineers along their career paths, sharing insights and experiences to help them grow.",
+    "wup": {
+      "copy": "At Wheels Up, I currently contribute to the Members Site application built in React with typescript. Here I am able to build new features and contribute to decisions on high level architecture for our application.",
+      "image": {
+        "src": "/wup.svg",
+        "alt": "Wheels Up Logo"
+      },
+      "href": "/professional/wheelsup"
+    },
+    "pin": {
+      "copy": "At Project Innovate Newark, I helped build 2 client side React applications and a Flask server applicaiton from the ground up to provide dynamic content, an administrative app, and deliver on various business needs.",
+      "image": {
+        "src": "/pin-logo.png",
+        "alt": "Project Innovate Newark Logo"
+      },
+      "href": "/professional/pin"
+    }
+  }
+}
