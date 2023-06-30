@@ -119,3 +119,9 @@ ul {
   width: 100%;
   min-height: 100vh;
 }
+
+@media (max-width: 600px) {
+  .pageContainer {
+    padding: 5rem 3rem;
+  }
+}

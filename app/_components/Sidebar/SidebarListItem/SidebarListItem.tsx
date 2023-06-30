@@ -9,14 +9,21 @@ interface ISideBarListItem {
   prefetch?: boolean;
   disabled?: boolean;
   children?: React.ReactNode | React.ReactNode[];
+  onClick?: () => void;
 }
 
-const SidebarListItem = ({href, copy, prefetch=false, nodeType, children}: ISideBarListItem) => {
+const SidebarListItem = ({href, copy, prefetch=false, nodeType, onClick, children}: ISideBarListItem) => {
   /**
    * When clicked, it will taker the user to the different parts of the portfolio
    */
   return (
-    <div className={`${styles.linkContainer} ${nodeType === "leaf" ? styles.leaf : styles.dropdown}`}>
+    <div
+      className={`
+        ${styles.linkContainer}
+        ${nodeType === "leaf" ? styles.leaf : styles.dropdown}
+      `}
+      onClick={() => onClick && onClick()}
+    >
       {nodeType === "leaf" || nodeType === "topLeaf"
         ?
           <Link href={href} prefetch={prefetch}>{copy}</Link>

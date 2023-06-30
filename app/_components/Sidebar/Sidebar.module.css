@@ -14,7 +14,7 @@
 }
 
 .sidebar.light {
-  background-color: #caf0ffd4;
+  background-color: #caf0ff;
 }
 
 .sidebar.light p {
@@ -44,20 +44,6 @@
 .sidebar ul {
   list-style-type: none;
   padding: 0;
-}
-
-
-
-@media (max-width: 900px) {
-  .sidebar {
-    width: 200px;
-  }
-}
-
-@media (max-width: 600px) {
-  .sidebar {
-    display: none;
-  }
 }
 
 .titleContainer { 
@@ -232,4 +218,266 @@
   transition: transform .3s;
 }
 
+@media (max-width: 900px) {
+  .sidebar {
+    width: 200px;
+  }
+}
 
+@media (max-width: 600px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 1rem;
+    height: 3rem;
+    background-color: #171927d4;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.063);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 10;
+    justify-content: space-between;
+  }
+  .titleContainer {
+    margin-left: 1rem;
+  }
+
+}
+
+/* start box animation */
+.displayBlock {
+  display: block;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+.top10 {
+  top: 10px;
+}
+
+.right24 {
+  right: 24px;
+}
+
+.zIndex11000 {
+  z-index: 11000;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.padding {
+  padding: 12px 0 0;
+}
+
+.backgroundTransparent {
+  background: transparent;
+}
+
+.borderRadius4 {
+  border-radius: 4px;
+}
+
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+.width40 {
+  width: 40px;
+}
+
+.height40 {
+  height: 40px;
+}
+
+.boxShadow {
+  box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.menuBox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 14px;
+}
+
+.menuInnerClosed {
+  top: 50%;
+  margin-top: -2px;
+}
+
+.menuInnerClosed,
+.menuInnerClosed:before,
+.menuInnerClosed:after {
+  background-color: #ffffff;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+.menuInnerClosed {
+  width: 16px;
+  left: 2px;
+}
+
+.menuInnerClosed:before {
+  content: '';
+  top: -6px;
+  left: -2px;
+}
+
+.menuInnerClosed:after {
+  content: '';
+  bottom: -6px;
+  left: -2px;
+}
+
+.hover .menuInnerClosed,
+.hover .menuInnerClosed:before,
+.hover .menuInnerClosed:after {
+  left: 0;
+  width: 20px;
+}
+
+.menuInnerOpen1 {
+  transform: rotate(45deg);
+  top: 50%;
+  margin-top: -2px;
+}
+
+.menuInnerOpen1,
+.menuInnerOpen1:before,
+.menuInnerOpen1:after {
+  background-color: #ffffff;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+.menuInnerOpen1 {
+  width: 16px;
+  left: 2px;
+}
+
+.menuInnerOpen1:before {
+  top: -6px;
+  left: -2px;
+}
+
+.menuInnerOpen1:after {
+  bottom: -6px;
+  left: -2px;
+}
+
+.hover .menuInnerOpen1,
+.hover .menuInnerOpen1:before,
+.hover .menuInnerOpen1:after {
+  left: 0;
+  width: 20px;
+}
+
+.menuInnerOpen2 {
+  transform: rotate(-45deg);
+  top: 50%;
+  margin-top: -2px;
+}
+
+.menuInnerOpen2,
+.menuInnerOpen2:before,
+.menuInnerOpen2:after {
+  background-color: #ffffff;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  display: block;
+  transition: all 0.2s ease-in-out;
+}
+
+.menuInnerOpen2 {
+  width: 16px;
+  left: 2px;
+}
+
+.menuInnerOpen2:before {
+  top: -6px;
+  left: -2px;
+}
+
+.menuInnerOpen2:after {
+  bottom: -6px;
+  left: -2px;
+}
+
+.hover .menuInnerOpen2,
+.hover .menuInnerOpen2:before,
+.hover .menuInnerOpen2:after {
+  left: 0;
+  width: 20px;
+}
+
+.menuMobile {
+  position: absolute;
+  padding: 1rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transform: translateY(-150%);
+  -webkit-transform: translateY(-150%);
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 0px 0px 24px 24px;
+  width: 100%;
+  background: #171927;
+}
+
+.menuMobile.light {
+  background-color: #caf0ff;
+}
+
+.menuInnerClosed.light {
+  background-color: black;
+}
+.light.menuInnerClosed:before {
+  background-color: black;
+}
+.light.menuInnerClosed:after {
+  background-color: black;
+}
+.menuInnerOpen1.light {
+  background-color: black;
+}
+.menuInnerOpen1:before.light {
+  background-color: black;
+}
+.menuInnerOpen1:after.light {
+  background-color: black;
+}
+.menuInnerOpen2.light {
+  background-color: black;
+}
+.menuInnerOpen2:before.light {
+  background-color: black;
+}
+.menuInnerOpen2:after.light {
+  background-color: black;
+}
+
+.boxShadow {
+  box-shadow: inset 0 0 0 1px black;
+}
