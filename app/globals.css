@@ -113,3 +113,9 @@ h2 {
 ul {
   list-style-type: disc;
 }
+
+.pageContainer {
+  padding: 3rem;
+  width: 100%;
+  min-height: 100vh;
+}
