@@ -10,17 +10,19 @@ export default function useViewport(): IViewport {
     );
 
     useEffect(() => {
-        const handleWindowResize = () =>
-            setWidth(window.innerWidth);
-        window.addEventListener(
-            'resize',
-            handleWindowResize,
-        );
-        return () =>
-            window.removeEventListener(
+        if (typeof window !== 'undefined') {
+            const handleWindowResize = () =>
+                setWidth(window.innerWidth);
+            window.addEventListener(
                 'resize',
                 handleWindowResize,
             );
+            return () =>
+                window.removeEventListener(
+                    'resize',
+                    handleWindowResize,
+                );
+        }
     }, []);
     return { width };
 }
