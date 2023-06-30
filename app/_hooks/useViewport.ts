@@ -6,7 +6,7 @@ interface IViewport {
 
 export default function useViewport(): IViewport {
     const [width, setWidth] = useState<number>(
-        window.innerWidth,
+        typeof window !== 'undefined' ? window.innerWidth : 0,
     );
 
     useEffect(() => {
